@@ -11,7 +11,7 @@ import com.projetojava.curso.entities.User;
 @RequestMapping(value = "/users")
 public class UserResource {
 	
-	@GetMapping
+	@GetMapping //Utilizada para mapear solicitações HTTP GET (Leitura de dados)
 	public ResponseEntity<User> findAll() {
 		User u = new User(1L, "Pedro", "pedro@gmail.com", "99999999", "12345");
 		return ResponseEntity.ok().body(u);
